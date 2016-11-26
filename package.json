@@ -1,0 +1,16 @@
+{
+  "name": "steem-witness-toolbox",
+  "version": "1.0.0",
+  "description": "A collection of utilities for witnesses maintaining the Steem blockchain network.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js publishnow"
+  },
+  "author": "Dragos <dragosroua+witness@gmail.com> (dragosroua)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "request": "^2.74.0",
+    "steemjs-lib": "^0.3.6"
+  }
+}

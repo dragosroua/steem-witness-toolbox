@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Steem Witness Toolbox
 ============
 
@@ -14,13 +14,6 @@ the following witness variables:
 * **account_creation_fee** - the price, in STEEM, that a user must pay in order to create an account on Steemit.com
 * **sbd_interest_rate** - the APR of Steem Backed Dollars
 * **maximum_block_size** - the maximum size of a block in the Steem blockchain
-=======
-Steem Feed JS
-============
-
-This is a STEEM Price Feed for witnesses on the [STEEM Network](https://steem.io). It's
-written in Node.JS and uses SVK's [SteemJS-Lib](https://github.com/svk31/steemjs-lib).
->>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
 
 Installation
 ========
@@ -28,7 +21,6 @@ Installation
 First, download the git repository, then edit `config.json` as needed. The interval is in minutes.
 
 ```
-<<<<<<< HEAD
 git clone https://github.com/dragosroua/steem-witness-toolbox.git
 cd steem-witness-toolbox
 cp config.example.json config.json
@@ -41,12 +33,6 @@ The following defaults are used if you leave the following fields empty in `conf
 account_creation_fee - 5 (USD)
 sbd_interest_rate - 13%
 maximum_block_size - 65536
-=======
-git clone https://github.com/Someguy123/steemfeed-js.git
-cd steemfeed-js
-cp config.example.json config.json
-nano config.json
->>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
 ```
 
 I recommend using Docker, however you can also use a locally installed copy of Node v6.
@@ -54,19 +40,11 @@ I recommend using Docker, however you can also use a locally installed copy of N
 **Starting Via Docker**
 
 ```
-<<<<<<< HEAD
 docker build -t steem-witness-toolbox .
 docker run -it --rm --name witness-toolbox steem-witness-toolbox
 
 # Check the status with docker logs
 docker logs witness-toolbox
-=======
-docker build -t steemfeed-js .
-docker run -it --rm --name feed steemfeed-js
-
-# Check the status with docker logs
-docker logs feed
->>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
 ```
 
 **Starting Via NodeJS (assuming you have v6 installed)**

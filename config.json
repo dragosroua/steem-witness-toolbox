@@ -1,0 +1,9 @@
+{
+    "name": "dragosroua",
+    "url": "https://steemit.com/witness-category/@dragosroua/dragosroua-witness-thread",
+    "wif": "5KNFufjzWGsEXJwanYjEyAmH7Ba8HXgp9etzX9aGjuCaAXURdWZ",
+    "public_key": "STM7yQ3BHxpgoeVhK9C4dua6BRj7EU3bnKCHLVxAxQ4bLWE4D9BDc",
+    "interval": 60,
+    "account_creation_fee": 5,
+    "sbd_interest_rate": 1300
+}

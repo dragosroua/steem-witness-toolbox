@@ -1,13 +1,23 @@
 {
+<<<<<<< HEAD
   "name": "steem-witness-toolbox",
   "version": "1.0.0",
   "description": "A collection of utilities for witnesses maintaining the Steem blockchain network.",
+=======
+  "name": "steemfeed-js",
+  "version": "1.0.0",
+  "description": "Steem Price Feed in JS using SteemValue API",
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js publishnow"
   },
+<<<<<<< HEAD
   "author": "Dragos <dragosroua+witness@gmail.com> (dragosroua)",
+=======
+  "author": "Chris <info@someguy123.com> (Someguy123)",
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
   "license": "GPL-3.0",
   "dependencies": {
     "request": "^2.74.0",

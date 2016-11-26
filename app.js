@@ -5,10 +5,13 @@
  * https://github.com/someguy123
  * Released under GNU GPL 3.0
  * Requires Node v6.3+
+<<<<<<< HEAD
  * 
  * modified by @dragosroua
  * https://github.com/dragosroua
  *
+=======
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
  */
 
 var config = require('./config.json');
@@ -17,11 +20,16 @@ var exchange = require('./lib/exchange');
 if(!('node' in config)) { config['node'] = 'wss://node.steem.ws'; }
 if(!('peg' in config)) { config['peg'] = true; }
 if(!('peg_multi' in config)) { config['peg_multi'] = 0.88; }
+<<<<<<< HEAD
 if(!('account_creation_fee' in config)) { config['account_creation_fee'] = 5; } // creation fee in USD
 if(!('sbd_interest_rate' in config)) {config['sbd_interest_rate'] = 1300; }
 if(!('maximum_block_size' in config)) {config['maximum_block_size'] = 65536; }
 
 var options = {url: config['node']};
+=======
+
+var options = {url: config['node']}
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
 var { TransactionBuilder, Login } = require('steemjs-lib');
 var {Client} = require('steem-rpc');
 var Api = Client.get(options, true);
@@ -77,6 +85,31 @@ var get_price = function(callback) {
     });
 }
 
+<<<<<<< HEAD
+=======
+// function get_price(callback) {
+//     request('https://value.steem.network/exdata.json', function(error,response,body) {
+//         if(error || response.statusCode != 200) {
+//             return callback(true,null);
+//         }
+//         var prices = JSON.parse(body),
+//             price = 0;
+
+//         if('usd_steem' in prices) {
+//             var price = 1 / prices['usd_steem'];
+//         }
+//         if('steem_usd' in prices) {
+//             var price = prices['steem_usd'];
+//         }
+//         if(price == 0) {
+//             return callback(true,null);
+//         }
+//         return callback(false, parseFloat(price));
+//     })
+//     //callback(false, price);
+//     //callback(true, null);
+// }
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
 
 function publish_feed(rate, account_data) {
     try {
@@ -97,6 +130,7 @@ function publish_feed(rate, account_data) {
     } catch(e) {
         console.error(e);
     }
+<<<<<<< HEAD
 
     console.log();
 }
@@ -125,6 +159,9 @@ function update_witness_info(rate, account_data) {
     }
     log('Witness data: ', witness_update_data);
     log('Price feed and options updated at: ', ""+new Date())
+=======
+    log('Data published at: ', ""+new Date())
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
     console.log();
 }
 
@@ -135,7 +172,10 @@ function main(account_data) {
         }
         log('STEEM/USD is ', price.toFixed(3));
         publish_feed(price, account_data);
+<<<<<<< HEAD
         update_witness_info(price, account_data);
+=======
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0
     });
 }
 
@@ -157,4 +197,9 @@ loginAccount(config.name, config.wif, ['active'], function(err,account_data) {
     // convert interval to minutes
     var interval = parseInt(config.interval) * 1000 * 60;
     setInterval(function() { main(account_data) }, interval)
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0

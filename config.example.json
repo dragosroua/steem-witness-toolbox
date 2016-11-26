@@ -1,8 +1,13 @@
 {
     "name": "your steem name",
     "wif": "your active private key",
+<<<<<<< HEAD
     "interval": 60,
     "public_key": "your public key",
     "account_creation_fee": 5, // in USD
     "sbd_interest_rate": 1300 // that format means 13%
 }
+=======
+    "interval": 60
+}
+>>>>>>> bf4d6444610bf36b24797e4085bf9ee7aba958e0

@@ -9,9 +9,9 @@ options for updating the SBD interest rate and setting up the account_creation_f
 The script updated the price feed at a set interval (default is 60 minutes, can be changed via config.json) and 
 the following witness arguments:
 
-account_creation_Fee - the price, in STEEM that a user must pay in order to create an account on Steemit.com
-sbd_interest_rate - the APR of Steem Backed Dolls
-maximum_block_size - the maximum size of a block in the Steem blockchain
+* **account_creation_fee** - the price, in STEEM that a user must pay in order to create an account on Steemit.com
+* **sbd_interest_rate** - the APR of Steem Backed Dolls
+* **maximum_block_size** - the maximum size of a block in the Steem blockchain
 
 Installation
 ========
@@ -25,7 +25,7 @@ cp config.example.json config.json
 vi config.json
 ```
 
-The following defaults are used:
+The following defaults are used if you leave these fields empty in `config,json`:
 
 ```
 account_creation_fee - 5 (USD)

@@ -17,7 +17,6 @@ var exchange = require('./lib/exchange');
 if(!('node' in config)) { config['node'] = 'wss://node.steem.ws'; }
 if(!('peg' in config)) { config['peg'] = true; }
 if(!('peg_multi' in config)) { config['peg_multi'] = 0.88; }
-<<<<<<< HEAD
 if(!('account_creation_fee' in config)) { config['account_creation_fee'] = 5; } // creation fee in USD
 if(!('sbd_interest_rate' in config)) {config['sbd_interest_rate'] = 1300; }
 if(!('maximum_block_size' in config)) {config['maximum_block_size'] = 65536; }

@@ -4,7 +4,7 @@ Steem Witness Toolbox
 This is a helper script for witnesses maintaining the [Steem](http:/steem.io) network. It's
 written in Node.JS and uses SVK's [SteemJS-Lib](https://github.com/svk31/steemjs-lib). 
 The heavy lifting was done by [someguy123](https://github.com/someguy123), I just added 
-options for updating the SBD interest rate and setting up the account_creation_fee.
+options for updating SBD interest rate, `account_creation_fee` and `maxmimum_block_size` arguments.
 
 The script updated the price feed at a set interval (default is 60 minutes, can be changed via config.json) and 
 the following witness arguments:

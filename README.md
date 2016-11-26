@@ -2,12 +2,13 @@ Steem Witness Toolbox
 ============
 
 This is a helper script for witnesses maintaining the [Steem](http:/steem.io) network. It's
-written in Node.JS and uses SVK's [SteemJS-Lib](https://github.com/svk31/steemjs-lib). 
+written in Node.JS, uses SVK's [SteemJS-Lib](https://github.com/svk31/steemjs-lib) and it's based 
+on [someguy123](https://github.com/someguy123)'s [steemfeed-js](https://github.com/Someguy123/steemfeed-js). 
 The heavy lifting was done by [someguy123](https://github.com/someguy123), I just added 
 options for updating SBD interest rate, `account_creation_fee` and `maxmimum_block_size` arguments.
 
-The script updated the price feed at a set interval (default is 60 minutes, can be changed via config.json) and 
-the following witness arguments:
+The script updates the price feed at a set interval (default is 60 minutes, can be changed via `config.json`) and 
+the following witness variables:
 
 * **account_creation_fee** - the price, in STEEM that a user must pay in order to create an account on Steemit.com
 * **sbd_interest_rate** - the APR of Steem Backed Dolls

@@ -27,7 +27,7 @@ docker build -t steem-witness-toolbox .
 docker run -it --rm --name witness-toolbox steem-witness-toolbox
 
 # Check the status with docker logs
-docker witness-toolbox logs
+docker logs witness-toolbox
 ```
 
 **Starting Via NodeJS (assuming you have v6 installed)**

@@ -128,7 +128,7 @@ function update_witness_info(rate, account_data) {
         var tr = new TransactionBuilder();   
         var acct_creation_fee = config['account_creation_fee'] / rate;
 		//log('Account creation fee ' + acct_creation_fee.toFixed(3)); 
-		var props = {
+		var chain_properties = {
 			//account_creation_fee: acct_creation_fee.toFixed(3) + " STEEM",
 			sbd_interest_rate: config['sbd_interest_rate'],
 			maximum_block_size: config['maximum_block_size']
@@ -137,7 +137,7 @@ function update_witness_info(rate, account_data) {
 			owner: config['name'],
 			url: config['url'],
 			block_signing_key: config['public_key'],
-			props: props,
+			props: chain_properties,
 			fee: acct_creation_fee.toFixed(3) + " STEEM"
 		} 
         tr.add_type_operation("witness_update", witness_update_data);

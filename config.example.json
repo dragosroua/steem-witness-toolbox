@@ -2,4 +2,7 @@
     "name": "your steem name",
     "wif": "your active private key",
     "interval": 60
+    "public_key": "your public key",
+    "account_creation_fee": 5, // in USD
+    "sbd_interest_rate": 1300 // that format means 13%
 }

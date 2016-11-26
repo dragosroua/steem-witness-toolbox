@@ -8,6 +8,7 @@
  * 
  * modified by @dragosroua
  * https://github.com/dragosroua
+ *
  */
 
 var config = require('./config.json');
@@ -76,28 +77,6 @@ var get_price = function(callback) {
     });
 }
 
-// function get_price(callback) {
-//     request('https://value.steem.network/exdata.json', function(error,response,body) {
-//         if(error || response.statusCode != 200) {
-//             return callback(true,null);
-//         }
-//         var prices = JSON.parse(body),
-//             price = 0;
-
-//         if('usd_steem' in prices) {
-//             var price = 1 / prices['usd_steem'];
-//         }
-//         if('steem_usd' in prices) {
-//             var price = prices['steem_usd'];
-//         }
-//         if(price == 0) {
-//             return callback(true,null);
-//         }
-//         return callback(false, parseFloat(price));
-//     })
-//     //callback(false, price);
-//     //callback(true, null);
-// }
 
 function publish_feed(rate, account_data) {
     try {
@@ -118,7 +97,7 @@ function publish_feed(rate, account_data) {
     } catch(e) {
         console.error(e);
     }
-    log('Price feed data published at: ', ""+new Date())
+
     console.log();
 }
 
@@ -145,9 +124,8 @@ function update_witness_info(rate, account_data) {
     } catch(e) {
         console.error(e);
     }
-    log('Witness props: ', props);
     log('Witness data: ', witness_update_data);
-    log('Wttness updated info at: ', ""+new Date());
+    log('Price feed and options updated at: ', ""+new Date())
     console.log();
 }
 
@@ -181,4 +159,3 @@ loginAccount(config.name, config.wif, ['active'], function(err,account_data) {
     var interval = parseInt(config.interval) * 1000 * 60;
     setInterval(function() { main(account_data) }, interval)
 });
-

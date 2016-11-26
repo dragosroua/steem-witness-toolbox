@@ -110,7 +110,8 @@ function update_witness_info(rate, account_data) {
 		var chain_properties = {
 			//account_creation_fee: acct_creation_fee.toFixed(3) + " STEEM",
 			sbd_interest_rate: config['sbd_interest_rate'],
-			maximum_block_size: config['maximum_block_size']
+			maximum_block_size: config['maximum_block_size'],
+			account_creation_fee: acct_creation_fee.toFixed(3) + " STEEM"
 		}
 		var witness_update_data = {
 			owner: config['name'],

@@ -106,9 +106,7 @@ function update_witness_info(rate, account_data) {
     try {
         var tr = new TransactionBuilder();   
         var acct_creation_fee = config['account_creation_fee'] / rate;
-		//log('Account creation fee ' + acct_creation_fee.toFixed(3)); 
 		var chain_properties = {
-			//account_creation_fee: acct_creation_fee.toFixed(3) + " STEEM",
 			sbd_interest_rate: config['sbd_interest_rate'],
 			maximum_block_size: config['maximum_block_size'],
 			account_creation_fee: acct_creation_fee.toFixed(3) + " STEEM"

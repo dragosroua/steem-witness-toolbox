@@ -136,7 +136,8 @@ function main(account_data) {
         }
         log('STEEM/USD is ', price.toFixed(3));
         publish_feed(price, account_data);
-        update_witness_info(price, account_data);
+        // delaying second transaction, bockchain limitation to prevent spam
+        setTimeout(function() { update_witness_info(price, account_data); }, 5000);
     });
 }
 
